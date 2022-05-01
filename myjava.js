@@ -290,6 +290,9 @@
 
 // 20- Write a program to create Simple Calculator
 
+
+// --------------- solution 1------------------------
+
 // // take the operator input
 // var operator = prompt('Enter operator ( either +, -, * or / ): ');
 
@@ -313,3 +316,45 @@
 // // display the result
 // // String Interpolation in JavaScript   https://dmitripavlutin.com/string-interpolation-in-javascript/
 // console.log(`${number1} ${operator} ${number2} = ${result}`);
+
+
+
+// --------------- solution 2------------------------
+
+
+var num1 = Number(prompt("please enter first number"));
+var operatin = prompt("please enter arithmetic operator");
+var num2 = Number(prompt("please enter second number"));
+if (typeof(num1) == "number" && typeof(num2) == "number") {
+
+    if (operatin == ('+' || '-' || '*' || '/' || '%')) {
+
+
+        switch (operatin) {
+            case '+':
+                console.log(num1 + num2);
+
+                break;
+            case '-':
+                console.log(num1 - num2);
+
+                break;
+            case '*':
+                console.log(num1 * num2);
+
+                break;
+            case '/':
+                console.log(num1 / num2);
+
+                break;
+            case '%':
+                console.log(num1 % num2);
+
+                break;
+
+
+            default:
+                break;
+        }
+    } else { alert("please enter only arithmetic operator  - + * / %") }
+} else { alert("please enter only numbers") }
